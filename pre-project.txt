@@ -1,0 +1,47 @@
+E-Commerce- Automotive vehicles 
+Model classes(based on your requirement) 
+Register Form and Login Form
+Admin User(options to add/update vehicle details) 
+Other User(View items, add item to Cart, delete item from cart)
+Database: Mysql(Login details) and Mongodb(Vehicle details)
+
+Note: 
+Routing with Guards to be used as needed
+Validations to be used
+RestAPI endpoints(URLs) should not carry user info (userid/emailid/name..)
+User identification details to be retreived thru JWT token only in BE application
+
+======================================================================================================================
+
+Spotify-web App 
+Model classes(based on your requirement) 
+Login and Register Form,
+Guest user can view all songs 
+Only logged-in user can play song, create playists(s), add song to playlist, remove song from playlist, remove playlist
+Database:Mysql(Login details) and Mongodb(Song details)
+(Note:Image card is optional)
+
+Note: 
+Routing with Guards to be used as needed
+Validations to be used
+RestAPI endpoints(URLs) should not carry user info (userid/emailid/name..)
+User identification details to be retreived thru JWT token only in BE application
+
+====================================================================================================================
+
+Pizza Delivery-e2e application Pizza Ordering System
+Login form & Register form 
+After Login user can view, choose pizza, add pizza to cart [ pizza detials : type, size, no of items.. ]
+Total price to be auto poulated on order confirmation page
+Pizza can be removed from cart
+Order history to be visible for user
+
+Database:Mysql(Login details) and Mongodb(Pizza details)
+
+Note: 
+Routing with Guards to be used as needed
+Validations to be used
+RestAPI endpoints(URLs) should not carry user info (userid/emailid/name..)
+User identification details to be retreived thru JWT token only in BE application
+
+====================================================================================================================

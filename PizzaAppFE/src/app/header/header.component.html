@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Pizza App</span>
+      <span class="example-spacer"></span>
+      
+      <a routerLink="/home">
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      </a>
+      
+      <a routerLink="/pizza-cart">
+        <mat-icon class="example-icon">shopping_cart</mat-icon>
+      </a>
+      
+      <a routerLink="/order-history">
+        <mat-icon class="example-icon">receipt</mat-icon>
+      </a>
+      
+      <a routerLink="/user-login">
+        <mat-icon class="example-icon">login</mat-icon>
+      </a>
+
+      <a routerLink="/user-logout">
+        <mat-icon class="example-icon" (click)="logout()">logout</mat-icon>
+      </a>
+      
+    </mat-toolbar-row>
+</mat-toolbar>

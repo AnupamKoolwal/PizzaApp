@@ -1,0 +1,18 @@
+<div class="outerCart">
+    <div *ngFor="let cartItem of cartList" class="AllCart">
+        <h2>Pizza Name :: {{cartItem.pizzaName}}</h2>
+        <h2>Pizza Price :: {{cartItem.pizzaPrice}}</h2>
+        <h2>Pizza Size :: {{cartItem.pizzaSize}}</h2>
+
+        <input type="number" name="qty" id="qty" value="{{cartItem.pizzaQuantity}}"
+            (change)="updateItem(cartItem,cartItem.pizzaQuantity)" [(ngModel)]="cartItem.pizzaQuantity">
+
+        <button (click)="deleteItem(cartItem.pizzaId)">delete</button>
+
+    </div>
+</div>
+
+<div class="TotalOrder">
+    <h1>Total Price : {{totalPrice}}</h1>
+    <button mat-raised-button color="primary" (click)="saveOrder()">Order</button>
+</div>

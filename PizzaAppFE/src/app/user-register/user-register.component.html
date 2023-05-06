@@ -1,0 +1,71 @@
+<div class="formRegistration">
+    <h1>Create Account</h1>
+    <form [formGroup]="register" (ngSubmit)="onSubmit()" class="fullForm">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input matInput type="text" id="userName" formControlName="userName">
+
+                <span
+                    *ngIf="userName?.invalid &&(userName?.dirty || userName?.touched)">
+                    <span *ngIf="userName?.errors?.['required']">UserName is Required</span>
+                </span>
+            </mat-form-field>
+
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput type="text" placeholder="pat@example.com" formControlName="userEmail" id="userEmail">
+                <span
+                    *ngIf="userEmail?.invalid &&(userEmail?.dirty || userEmail?.touched)">
+                    <span *ngIf="userEmail?.errors?.['required']">UserEmail is Required</span>
+                    <span *ngIf="userEmail?.errors?.['pattern']">Enter Valid email</span>
+                </span>
+
+            </mat-form-field>
+        </div>
+
+        <div class="passwordInput">
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                
+                <input matInput [type]="hide ? 'userPassword' : 'text'" id="userPassword" formControlName="userPassword">
+                
+                <span
+                    *ngIf="userPassword?.invalid &&(userPassword?.dirty || userPassword?.touched)">
+                    <span *ngIf="userPassword?.errors?.['required']">userPassword is Required</span>
+                    <span *ngIf="userPassword?.errors?.['minlength']">password Should have minimum 8
+                        characters</span>
+                </span>
+
+            </mat-form-field>
+
+        </div>
+
+
+
+        <div>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="text" id="userPhoneNo" formControlName="userPhoneNo">
+                <span
+                    *ngIf="userPhoneNo?.invalid &&(userPhoneNo?.dirty || userPhoneNo?.touched)">
+                    <span *ngIf="userPassword?.errors?.['required']">UserPhoneNo is Required</span>
+                    <span *ngIf="userPhoneNo?.errors?.['pattern']">valid phone number contains 10 digits and
+                        starts with 7,8,9</span>
+                </span>
+
+            </mat-form-field>
+        </div>
+
+        <div >
+            <button mat-raised-button color="primary" type="submit" [disabled]="register.invalid" class="button1">Submit</button>
+
+            <p>-----------------For Sign In-----------------</p>
+            <a routerLink="/user-login" mat-raised-button color="warn" type="button" class="button2">Sign in</a>
+        </div>
+    </form>
+</div>

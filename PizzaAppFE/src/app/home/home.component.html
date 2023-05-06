@@ -1,0 +1,34 @@
+<div id="container" >
+
+    <div *ngFor="let pizza of allPizza" id="div">
+
+        <mat-card class="example-card">
+            <mat-card-header  class="containName">
+              <mat-card-title>{{pizza.pizzaName}}</mat-card-title>
+            </mat-card-header>
+            
+            <img mat-card-image src="../../assets/Images/PizzaImage.jpeg" alt="PizzaImage">
+            
+            <div class="cardText">
+              <mat-card-actions>
+
+                <h3 class="contain1">Pizza Price :: {{pizza.pizzaPrice}}</h3>
+                
+                <p class="contain2">
+                  Pizza Size ::
+                  <mat-icon class="mat-icon-lg">{{pizza.pizzaSize}}</mat-icon> 
+                </p>
+
+                <div class="contain3">
+                  <button mat-icon-button (click)="addToCart(pizza)">
+                    <mat-icon color="primary" matTooltip="add to cart">shopping_cart</mat-icon>
+                  </button>
+                </div>
+
+              </mat-card-actions>
+            </div>
+        </mat-card>
+  
+    </div>
+
+</div>

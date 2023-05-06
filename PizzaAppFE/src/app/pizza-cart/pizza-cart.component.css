@@ -1,0 +1,10 @@
+.AllCart{
+    border: 2px solid gray;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.TotalOrder{
+    margin-left: 80%;
+    text-align: center;
+}

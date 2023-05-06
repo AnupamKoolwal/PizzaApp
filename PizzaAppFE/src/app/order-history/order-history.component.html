@@ -1,0 +1,39 @@
+<h1><b>Order History</b></h1>
+
+<mat-accordion class="example-headers-align" multi>
+  <div *ngFor="let order of orders">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Order Id : {{order.orderId}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-label>Order date : {{order.orderDate}}</mat-label>
+          <mat-label>Total Price : {{order.orderTotalPrice}}</mat-label>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Pizza Name</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of order.orderPizzaList">
+            <tr>
+              <td>{{item.pizzaName}}</td>
+              <td>{{item.pizzaSize}}</td>
+              <td>{{item.pizzaPrice}}</td>
+              <td>{{item.pizzaQuantity}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>

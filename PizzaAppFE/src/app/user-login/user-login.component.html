@@ -1,0 +1,41 @@
+<div class="formLogin">
+    <h1>Sign In</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="fullForm">
+        
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput type="email" placeholder="pat@example.com" formControlName="userEmail" id="userEmail">
+                <span
+                    *ngIf="userEmail?.invalid &&(userEmail?.dirty || userEmail?.touched)">
+                    <span *ngIf="userEmail?.errors?.['required']">UserEmail is Required</span>
+                    <span *ngIf="userEmail?.errors?.['pattern']">Enter Valid email</span>
+                </span>
+
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'userPassword' : 'text'" id="password" formControlName="userPassword">
+                
+                <span
+                    *ngIf="userPassword?.invalid &&(userPassword?.dirty || userPassword?.touched)">
+                    <span *ngIf="userPassword?.errors?.['required']">UserPassword is Required</span>
+                    <span *ngIf="userPassword?.errors?.['minlength']">password Should have minimum 8
+                        characters</span>
+                </span>
+
+            </mat-form-field>
+        </div>
+
+        <div >
+            <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" class="button1">Sign in</button>
+
+            <p>---------------For New User---------------</p>
+            <a routerLink="/user-register" mat-raised-button color="warn" type="button" class="button2">Create Account</a>
+        </div>
+
+    </form>
+</div>

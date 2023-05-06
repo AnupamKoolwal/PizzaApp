@@ -1,0 +1,29 @@
+.formLogin{
+    /* border: 2px solid gray; */
+    width: 210px;
+    margin: auto;
+}
+
+h1{
+    margin-top: 30px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button1{
+    width: 210px;
+}
+
+.button1:disabled{
+    color: white;
+    background-color: black;
+}
+
+p{
+    margin-top: 20px;
+}
+
+.button2{
+    width: 210px;
+}

@@ -1,0 +1,16 @@
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    margin-top: 20px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: large;
+}
